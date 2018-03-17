@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_lace"
+    android:orientation="vertical"
+    tools:context="com.example.panda.myapplication.MainActivity">
+
+
+    <com.zhy.android.percent.support.PercentFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+
+        <ImageView
+
+            android:id="@+id/indexcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kitty_eth"
+            app:layout_heightPercent="40%"
+            app:layout_widthPercent="100%" />
+
+        <TextView
+            android:id="@+id/indextext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Collectible.\nBreedable.\nAdorable."
+            android:textColor="@color/white"
+            android:textSize="15pt"
+            app:layout_heightPercent="85%"
+            app:layout_widthPercent="50%"
+            app:layout_marginPercent="10%h"
+            />
+
+        <TextView
+            android:id="@+id/indextext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="collect and breed digital cats."
+            android:textColor="@color/white"
+            android:textSize="7pt"
+            app:layout_heightPercent="115%"
+            app:layout_marginPercent="10%h"
+            app:layout_widthPercent="50%" />
+
+        <Button
+            android:id="@+id/startbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="140dp"
+            android:alpha="0.5"
+            android:onClick="btnclick"
+            android:background="@drawable/btn_bg_red"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Start meow"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_heightPercent="9%"
+            app:layout_widthPercent="27%" />
+
+
+    </com.zhy.android.percent.support.PercentFrameLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

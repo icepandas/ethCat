@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.panda.myapplication.MainCat">
+
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="9pt"
+        android:text="CatApp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintRight_toRightOf="@+id/navigation"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintLeft_toLeftOf="@+id/navigation">
+
+
+        <com.zhy.android.percent.support.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/tools_one"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="top|left"
+                android:background="#44ff0000"
+                android:gravity="center"
+                app:layout_heightPercent="30%w"
+                app:layout_marginPercent="5%w"
+                app:layout_widthPercent="25%w" />
+
+            <ImageButton
+                android:id="@+id/tools_two"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="top|center"
+                android:background="#44ff0000"
+                android:gravity="center"
+                app:layout_heightPercent="30%w"
+                app:layout_marginPercent="5%w"
+                app:layout_widthPercent="25%w" />
+
+            <ImageButton
+                android:id="@+id/tools_three"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="top|right"
+                android:background="#44ff0000"
+                android:gravity="center"
+                app:layout_heightPercent="30%w"
+                app:layout_marginPercent="5%w"
+                app:layout_widthPercent="25%w" />
+
+
+            <ImageButton
+                android:id="@+id/tools_four"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#44ff0000"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/tools_one"
+                app:layout_heightPercent="30%w"
+                app:layout_marginPercent="5%w"
+                app:layout_widthPercent="25%w" />
+
+            <ImageButton
+                android:id="@+id/tools_five"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:background="#44ff0000"
+                android:gravity="center"
+                app:layout_heightPercent="30%w"
+                app:layout_marginPercent="5%w"
+                app:layout_widthPercent="25%w" />
+
+
+        </com.zhy.android.percent.support.PercentFrameLayout>
+
+
+    </FrameLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
