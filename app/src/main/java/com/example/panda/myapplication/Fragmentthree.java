@@ -6,8 +6,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,21 +26,28 @@ public class Fragmentthree extends Fragment {
     private int[] item_img2=new int[]{R.drawable.slice,R.drawable.slice,R.drawable.slice,R.drawable.slice};
     private List<Map<String,Object>> item2_datas = new ArrayList<>();
 
-
+    private static final String TAG = "Fragmentthree";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+                             final Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragmentthree, container, false);
         gridView2=(GridView)view.findViewById(R.id.gridView2);
         initData();
-        SimpleAdapter adapter =new SimpleAdapter(getActivity(),item2_datas,R.layout.grid_item2,new String[]{"item2_text","item2_img"},new int[]{R.id.item2_text,R.id.item2_img});
+        final SimpleAdapter adapter =new SimpleAdapter(getActivity(),item2_datas,R.layout.grid_item2,new String[]{"item2_text","item2_img"},new int[]{R.id.item2_text,R.id.item2_img});
         gridView2.setAdapter(adapter);
 
+        gridView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getContext(),"111111",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         return view;
+
+
     }
 
     private void initData() {
@@ -48,8 +57,8 @@ public class Fragmentthree extends Fragment {
             item.put("item2_img",item_img2[i]);
             item2_datas.add(item);
         }
-
     }
+
 
 
 }
