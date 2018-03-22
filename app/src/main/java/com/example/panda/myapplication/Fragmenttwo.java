@@ -3,13 +3,16 @@ package com.example.panda.myapplication;
 /**
  * Created by panda on 2018/3/14.
  */
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +34,16 @@ public class Fragmenttwo extends Fragment{
         initData();
         SimpleAdapter adapter =new SimpleAdapter(getActivity(),item3_datas,R.layout.grid_item3,new String[]{"item3_text","item3_img"},new int[]{R.id.item3_text,R.id.item3_img});
         gridView3.setAdapter(adapter);
+
+        gridView3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position!=0){
+                    Intent intent =new Intent(getActivity(),SettingActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         return view;
     }

@@ -40,13 +40,12 @@ public class Fragmentthree extends Fragment {
         gridView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(),"111111",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),grid_item_text[position],Toast.LENGTH_SHORT).show();
             }
         });
 
 
         return view;
-
 
     }
 
